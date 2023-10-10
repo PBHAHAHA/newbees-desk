@@ -1,4 +1,5 @@
 'use client';
+import { Menu } from 'lucide-react';
 import MainContainer from './MainContainer';
 import ThemeSwitcher from './ThemeSwitcher';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
@@ -8,10 +9,12 @@ const Header = () => {
       <MainContainer>
         <div className="w-full h-full flex items-center justify-between">
           <div className="flex items-center">
-            <div className=" text-lg py-2 px-4 bg-white text-black">
+            <Menu className="md:hidden"></Menu>
+            <div className=" ml-20 md:ml-0 md:block text-lg py-2 px-4 bg-white text-black">
               NewBees
             </div>
-            <ul className="ml-10">
+            {/* <div className=" md:hidden">桌搭社</div> */}
+            <ul className="ml-10 hidden md:block">
               <li>首页</li>
             </ul>
           </div>
