@@ -4,15 +4,16 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    'plugin:react-hooks/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
-  },
-}
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'no-console': 'warn',
+    'no-unused-vars': 'error',
+    'no-var': 'error',
+    '@typescript-eslint/no-explicit-any': ['off'] // 把他加上重启项目就行了
+  }
+};
